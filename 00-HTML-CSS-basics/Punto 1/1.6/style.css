@@ -3,8 +3,8 @@ html {
   line-height: 2em;
   text-align: center;
   font-size: 22px;
-  color: #FFFFFF;
-  text-shadow: 2px 2px #DB9BAE;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgb(219, 155, 174);
 }
 
 input, textarea, button, select, fieldset {
@@ -16,13 +16,13 @@ fieldset {
 }
 
 button {
-  background-color: #FFFFFF;
-  border: 2px solid #FFFFFF;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
   font-size: 24px;
   font-family: Verdana, Arial, sans-serif;
   opacity: 0.9;
 }
 
 button:hover {
-  border: 2px solid #DB9BAE;
+  border: 2px solid rgb(219, 155, 174);
 }

@@ -4,7 +4,7 @@
 }
 
 header, footer, aside, nav {
-	background-color: yellow;
+	background-color: rgb(255, 255, 0);
 }
 
 header, footer {
@@ -38,7 +38,7 @@ header, footer {
 }
 
 .content {
-	background-color: yellow;
+	background-color: rgb(255, 255, 0);
 	font-size: 14px;
 	box-sizing: border-box;
 	width: 50%;
@@ -74,15 +74,15 @@ header, footer {
 }
 
 [class$=r] {
-	background-color: magenta;
+	background-color: rgb(255, 0, 255);
 }
 
 [class*=a]:not([class$=r]) {
-	background-color: blue;
+	background-color: rgb(0, 0, 255);
 }
 
 article {
-	background-color: orange;
+	background-color: rgb(255, 131, 0);
 	text-align: center;
 }
 
