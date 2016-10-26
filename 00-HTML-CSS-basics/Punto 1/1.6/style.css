@@ -1,0 +1,28 @@
+html {
+  font-family: Verdana, Arial, sans-serif;
+  line-height: 2em;
+  text-align: center;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgb(219, 155, 174);
+}
+
+input, textarea, button, select, fieldset {
+  border-radius: 10px 5px;
+}
+
+fieldset {
+  background-image: url("https://uxmag.com/sites/default/files/styles/632x307/adaptive-image/public/article-images/ux-patterns-banner2.png?itok=AidPE1MJ");
+}
+
+button {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  font-size: 24px;
+  font-family: Verdana, Arial, sans-serif;
+  opacity: 0.9;
+}
+
+button:hover {
+  border: 2px solid rgb(219, 155, 174);
+}
