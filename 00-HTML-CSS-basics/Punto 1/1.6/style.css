@@ -1,0 +1,28 @@
+html {
+  font-family: Verdana;
+  line-height: 2em;
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  text-shadow: 2px 2px #DB9BAE;
+}
+
+input, textarea, button, select, fieldset {
+  border-radius: 10px 5px;
+}
+
+fieldset {
+  background-image: url("https://uxmag.com/sites/default/files/styles/632x307/adaptive-image/public/article-images/ux-patterns-banner2.png?itok=AidPE1MJ");
+}
+
+button {
+  background-color: white;
+  border: 2px solid white;
+  font-size: 24px;
+  font-family: Verdana;
+  opacity: 0.9;
+}
+
+button:hover {
+  border: 2px solid #DB9BAE;
+}

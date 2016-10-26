@@ -1,0 +1,30 @@
+body {
+  background-image: url("http://images.gofreedownload.net/romantic-rose-vector-pattern-237709.jpg");
+  background-repeat: repeat;
+}
+
+iframe {
+  float: center;
+  background: #F9A3D2;
+  border: 1px solid #9799a7;
+  float: center;
+  margin: 8px 0 0 20px;
+  padding: 4px;
+}
+
+img {
+  background: #F9A3D2;
+  border: 1px solid #9799a7;
+  float: center;
+  margin: 8px 0 0 20px;
+  padding: 4px;
+}
+
+audio {
+  float: center;
+  background: #F9A3D2;
+  border: 1px solid #9799a7;
+  float: center;
+  margin: 8px 0 0 20px;
+  padding: 4px;
+}
