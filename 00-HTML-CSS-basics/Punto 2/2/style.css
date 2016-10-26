@@ -1,6 +1,6 @@
 !html {
 	font-size: 14px;
-	font-family: Arial;
+	font-family: Arial, Verdana, sans-serif;
 }
 
 header, footer, aside, nav {
@@ -42,7 +42,7 @@ header, footer {
 	font-size: 14px;
 	box-sizing: border-box;
 	width: 50%;
-	min-height: 150px; 
+	min-height: 150px;
 	overflow: auto;
 	position: relative;
 	display: inline-block;
@@ -54,7 +54,7 @@ header, footer {
 	font-size: 12px;
 	box-sizing: border-box;
 	width: 25%;
-	min-height: 150px; 
+	min-height: 150px;
 	float: left;
 	display: inline-block;
 	border-radius: 10px;
@@ -65,7 +65,7 @@ header, footer {
 	font-size: 10px;
 	box-sizing: border-box;
 	width: 25%;
-	min-height: 150px; 
+	min-height: 150px;
 	float: right;
 	position: relative;
 	display: inline-block;
@@ -91,6 +91,6 @@ section header, section article, section footer {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: auto;
-	margin-right: auto; 
+	margin-right: auto;
 	box-sizing: content-box;
 }

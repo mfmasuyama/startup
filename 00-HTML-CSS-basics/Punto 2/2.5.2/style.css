@@ -74,7 +74,6 @@ img:hover + .after{
       }
 }
 
-
 @media only screen and (max-width: 320px) {
     [class^="column"] {
         width: 100% !important;

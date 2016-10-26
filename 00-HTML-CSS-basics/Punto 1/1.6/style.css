@@ -1,9 +1,9 @@
 html {
-  font-family: Verdana;
+  font-family: Verdana, Arial, sans-serif;
   line-height: 2em;
   text-align: center;
   font-size: 22px;
-  color: white;
+  color: #FFFFFF;
   text-shadow: 2px 2px #DB9BAE;
 }
 
@@ -16,10 +16,10 @@ fieldset {
 }
 
 button {
-  background-color: white;
-  border: 2px solid white;
+  background-color: #FFFFFF;
+  border: 2px solid #FFFFFF;
   font-size: 24px;
-  font-family: Verdana;
+  font-family: Verdana, Arial, sans-serif;
   opacity: 0.9;
 }
 

@@ -1,16 +1,16 @@
 body {
   background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/02/Beautiful-Pink-Floral-Pattern-Wallpaper1.jpg");
   text-align: left;
-  font-family: monospace;
+  font-family: monospace, Arial, Verdana;
   font-size: 24px;
-  color: white;
-  text-shadow: 1px 1px red;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px rgb(244, 66, 83);
 }
 
 header {
   font-size: 28px;
-  background-color: #FB7181;
-  border: 2px solid #FD6AD4;
+  background-color: rgb(251, 113, 129);
+  border: 2px solid rgb(253, 106, 212);
   text-align: center;
 }
 
@@ -20,6 +20,6 @@ ul {
 }
 
 li:hover {
-  color: #FD6AD4;
-  text-shadow: 2px 2px red;
+  color: rgb(253, 106, 212);
+  text-shadow: 2px 2px rgb(244, 66, 83);
 }

@@ -1,7 +1,7 @@
 body {
-	font-family: Courier;
+	font-family: Courier, Arial, Verdana;
 	font-size: 24px;
-	color: white;
+	color: rgb(255, 255, 255);
 	line-height: 2em;
 	text-align: center;
 }
@@ -9,7 +9,7 @@ body {
 table {
 	table-layout: auto;
 	background-image: url("http://2.bp.blogspot.com/-2wDuT8Iu08E/T_zeoJ0_aBI/AAAAAAAAKyg/w87GKtcYgg4/s1600/Neon+pink+hot+chevron+background+paper+pattern.jpg");
-	border: 2px solid purple;
+	border: 2px solid rgb(108, 57, 137);
 	width: 40%;
 	padding: 5px;
 }
@@ -17,7 +17,7 @@ table {
 thead {
 	display: table-header-group;
 	vertical-align: middle;
-	background-color: #a742f4;
+	background-color: rgb(167, 66, 244);
 }
 
 tr {
@@ -25,11 +25,11 @@ tr {
 }
 
 tr td {
-	border: 3px solid magenta;
+	border: 3px solid rgb(242, 46, 222);
 	background-color: rgba(193, 160, 219,0.9);
 }
 
 tr td:nth-child(2) {
-	border: 3px solid magenta;
+	border: 3px solid rgb(242, 46, 222);
 	background-color: rgba(246, 252, 85,0.9);
 }
