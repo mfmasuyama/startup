@@ -33,7 +33,7 @@ p {
   float: left;
 }
 
-img {
+.column-third img {
   width: 100%;
   height: 100%;
   display: block;
