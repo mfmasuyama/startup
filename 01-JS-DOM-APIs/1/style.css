@@ -1,7 +1,12 @@
-section {
+body {
     text-align: center;
 }
 
 .hidden {
     display: none;
+}
+
+section img {
+    width: 640px;
+    height: 427px;
 }
