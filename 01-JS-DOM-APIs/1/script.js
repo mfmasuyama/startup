@@ -17,7 +17,7 @@ function getAJoke() {
     request.send();
 };
 
-//7
+//7 -- Revisar
 let ajax = function (config) {
     return new Promise(function (resolve, reject) {
         let request = new XMLHttpRequest();
