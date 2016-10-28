@@ -69,20 +69,19 @@ req.send(null);
 }*/
 
 
-// 9 -- Error 422 Unprocessable Entity
+// 9
 window.onload = function() {
     let request = new XMLHttpRequest();
-    let url = "https://api.github.com/search/repositories";
+    let url = "https://api.github.com/search/repositories?q=javascript";
     request.onreadystatechange = function() {
         let list = document.querySelector("#repositoriesList");
-        if (this.readyState == 4 && this.status == 200) {
-            let repositories = JSON.parse(this.responseText);
-            repositories.forEach(function(repository) {
-                if([repository.value.items.value.q==="JavaScript"]) {
-                    let item = document.createElement("li");
-                    item.setAttribute(repository.value.full_name);
-                    list.insertAfter(item, list.lastChild);
-                }
+        if(this.readyState == 4 && this.status == 200) {
+            let repositories = JSON.parse(this.response);
+            repositories.items.forEach(function(item) {
+                let itemElem = document.createElement("li");
+                let data = document.createTextNode(item.full_name);
+                itemElem.appendChild(data);
+                list.appendChild(itemElem);
             });
         }
     };
@@ -131,24 +130,23 @@ console.log('Hubo un error!');
 });
 */
 
-// 10 -- Error 422 Unprocessable Entity
+// 10
 function search() {
-    let search = document.querySelector("#search");
+    let search = document.querySelector("#search").value;
     let request = new XMLHttpRequest();
-    let url = "https://api.github.com/search/repositories";
+    let url = "https://api.github.com/search/repositories?q=" + search;
     request.onreadystatechange = function() {
         let list = document.querySelector("#repositoriesList");
         while(list.firstChild) {
             list.removeChild(list.firstChild);
         }
-        if (this.readyState == 4 && this.status == 200) {
-            let repositories = JSON.parse(this.responseText);
-            repositories.forEach(function(repository) {
-                if([repository.value.items.value.q===search]) {
-                    let item = document.createElement("li");
-                    item.setAttribute(repository.value.full_name);
-                    list.insertAfter(item, list.lastChild);
-                }
+        if(this.readyState == 4 && this.status == 200) {
+            let repositories = JSON.parse(this.response);
+            repositories.items.forEach(function(item) {
+                let itemElem = document.createElement("li");
+                let data = document.createTextNode(item.full_name);
+                itemElem.appendChild(data);
+                list.appendChild(itemElem);
             });
         }
     };
