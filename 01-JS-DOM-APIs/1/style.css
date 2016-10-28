@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    background: yellow;
 }
 
 .hidden {
@@ -7,6 +8,17 @@ body {
 }
 
 section img {
-    width: 640px;
-    height: 427px;
+    width: 320px;
+    height: 213.5px;
+    float: left;
+}
+
+.repositories {
+    background-color: magenta;
+    float: right;
+    text-align: left;
+}
+
+.content {
+    float: left;
 }

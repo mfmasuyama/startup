@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    	<title>Index</title>
-    	<link rel="stylesheet" type="text/css" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script type="text/javascript" src="script.js"></script>
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <header class="header"></header>
-        <section class="content">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <div class="repositories">
-                <ul id="repositoriesList"></ul>
-            </div>
-            <img src="http://www.pets4homes.co.uk/images/articles/2460/large/how-to-feed-ponies-to-avoid-obesity-54ad2a0dbcbb0.jpg" alt="Pony">
-        </section>
-        <section class="hidden">
-            <p>Hello World</p>
-        </section>
-        <button id="jokeButton" onclick="getAJoke()">Get a Joke</button>
-        <p id="joke"></p>
-        <footer class="footer"></footer>
-    </body>
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header class="header"></header>
+    <section class="content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <img src="http://www.pets4homes.co.uk/images/articles/2460/large/how-to-feed-ponies-to-avoid-obesity-54ad2a0dbcbb0.jpg" alt="Pony">
+        <div class="repositories">
+            <fieldset>
+                <div class="labelImput">
+                    <label for="search">Search</label>:
+                    <input id="search" type="text" required>
+                </div>
+                <button id="searchButton" onclick="search()">Search</button>
+            </fieldset>
+            <ul id="repositoriesList"></ul>
+        </div>
+    </section>
+    <section class="hidden">
+        <p>Hello World</p>
+    </section>
+    <button id="jokeButton" onclick="getAJoke()">Get a Joke</button>
+    <p id="joke"></p>
+    <footer class="footer"></footer>
+</body>
 </html>
