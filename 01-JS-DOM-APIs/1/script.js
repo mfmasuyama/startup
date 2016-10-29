@@ -17,38 +17,46 @@ function getAJoke() {
     request.send();
 };
 
-//7 -- Revisar
-let ajax = function (config) {
+//7
+function ajax (config) {
     return new Promise(function (resolve, reject) {
-        let request = new XMLHttpRequest();
-        request.onreadystatechange = function() {
-            const async = true;
-            request.onload = resolve;
-            request.onerror = reject;
-            request.setRequestHeader("contentType", config.contentType);
-            request.open(config.method, config.url, async);
+        var request = new XMLHttpRequest();
+        var async = true;
+        request.onload = function (response) {
+            if(response.target.status !== 200) {
+                reject({
+                    code: response.target.status,
+                    message: response.target.statusText
+                });
+            } else {
+                resolve(response.target.response);
+            }
         }
-        if(options.method !== "GET") {
+        request.onerror = reject;
+        if(config.method === 'GET' && config.data) {
+            config.url += '?' + config.data;
+        }
+        request.open(config.method, config.url, async);
+        if(config.method !== 'GET' && config.data) {
             request.send(config.data);
-        }  else {
+        } else {
             request.send();
         }
     });
-};
+}
 
-// 8 -- .content = null
-ajax({url: "index.html",
-method: 'GET',
-contentType: 'json',
-data: 'firstField=foo&secondField=var'})
-.then(function (response) {
-    console.log('On success: ', response);
-}, function (error) {
-    console.log('On error: ', error);
-    console.log(document.querySelector(".content"));
-//    $(".content").attr("color", "red");
-    document.querySelector(".content").color = "red";
-});
+// 8
+window.onload = function() {
+    let request = new XMLHttpRequest();
+    let url = "C:/Workspace/startup/01-JS-DOM-APIs/1/index.html";
+    request.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 500) {
+            document.querySelector(".content").style.color = "red";
+        }
+    };
+    request.open("GET", url, true);
+    request.send();
+}
 
 /* -- Example
 
@@ -153,3 +161,56 @@ function search() {
     request.open("GET", url, true);
     request.send();
 };
+
+// 12
+/*
+Por si hay alguna forma de hacer la matriz desde el string.
+*/
+function createTable() {
+    //let matrix = [];
+    //matrix.push(document.querySelector("#matrix").value);
+    let matrix = document.querySelector("#matrix").value;
+    let table = document.querySelector("#table");
+    let tbody = document.createElement("tbody");
+    for(var i=0; i<matrix.length; i++) {
+        let tr = document.createElement("tr");
+        for(var j=0; j<matrix[i].length; j++) {
+            let th = document.createElement("th");
+            let data = document.createTextNode(matrix[i][j]);
+            th.appendChild(data);
+            tr.appendChild(th);
+        }
+        tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+}
+
+// Version que "hace" una matriz.
+/*function createTable2() {
+    let matrix = document.querySelector("#matrix").value;
+    let table = document.querySelector("#table");
+    let tbody = document.createElement("tbody");
+    let aux = 0;
+    for(var c=1; c<matrix.length-1; c++) { // Para que no tome los [] del principio y final
+        if(matrix[c] === "[") {
+            aux = c+1;
+            while (matrix[aux] !== "]") {
+
+            }
+
+
+        }
+    }
+    for(var i=0; i<count; i++) {
+        let tr = document.createElement("tr");
+        for(var j=0; j<count; j++) {
+            let th = document.createElement("th");
+            let data = document.createTextNode(matrix[i][j]);
+            th.appendChild(data);
+            tr.appendChild(th);
+        }
+        tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+}
+*/

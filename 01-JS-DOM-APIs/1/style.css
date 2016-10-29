@@ -19,6 +19,12 @@ section img {
     text-align: left;
 }
 
+.createTable {
+    background-color: cyan;
+    float: left;
+    text-align: left;
+}
+
 .content {
     float: left;
 }
