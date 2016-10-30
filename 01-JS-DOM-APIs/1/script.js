@@ -74,7 +74,8 @@ req.addEventListener("error", function() {
 callback(null, new Error("Network error"));
 });
 req.send(null);
-}*/
+}
+*/
 
 
 // 9
@@ -163,54 +164,25 @@ function search() {
 };
 
 // 12
-/*
-Por si hay alguna forma de hacer la matriz desde el string.
-*/
-function createTable() {
-    //let matrix = [];
-    //matrix.push(document.querySelector("#matrix").value);
-    let matrix = document.querySelector("#matrix").value;
-    let table = document.querySelector("#table");
+function createTable(matrix) {
+    let table = document.createElement("table");
     let tbody = document.createElement("tbody");
     for(var i=0; i<matrix.length; i++) {
         let tr = document.createElement("tr");
         for(var j=0; j<matrix[i].length; j++) {
-            let th = document.createElement("th");
+            let td = document.createElement("td");
             let data = document.createTextNode(matrix[i][j]);
-            th.appendChild(data);
-            tr.appendChild(th);
+            td.appendChild(data);
+            tr.appendChild(td);
         }
         tbody.appendChild(tr);
     }
     table.appendChild(tbody);
+    return table;
 }
 
-// Version que "hace" una matriz.
-/*function createTable2() {
-    let matrix = document.querySelector("#matrix").value;
-    let table = document.querySelector("#table");
-    let tbody = document.createElement("tbody");
-    let aux = 0;
-    for(var c=1; c<matrix.length-1; c++) { // Para que no tome los [] del principio y final
-        if(matrix[c] === "[") {
-            aux = c+1;
-            while (matrix[aux] !== "]") {
-
-            }
-
-
-        }
-    }
-    for(var i=0; i<count; i++) {
-        let tr = document.createElement("tr");
-        for(var j=0; j<count; j++) {
-            let th = document.createElement("th");
-            let data = document.createTextNode(matrix[i][j]);
-            th.appendChild(data);
-            tr.appendChild(th);
-        }
-        tbody.appendChild(tr);
-    }
-    table.appendChild(tbody);
+function insertTable() {
+    let matrix = [[1,2],[3,4],[5,6]];
+    let table = createTable(matrix);
+    document.body.appendChild(table);
 }
-*/

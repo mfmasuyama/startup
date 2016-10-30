@@ -8,7 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <header class="header"></header>
+        <header class="header">
+            <img src="http://www.pets4homes.co.uk/images/articles/2460/large/how-to-feed-ponies-to-avoid-obesity-54ad2a0dbcbb0.jpg" alt="Pony">
+        </header>
         <section class="content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -17,33 +19,25 @@
                 in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <img src="http://www.pets4homes.co.uk/images/articles/2460/large/how-to-feed-ponies-to-avoid-obesity-54ad2a0dbcbb0.jpg" alt="Pony">
+            <div class="hiddenSection">
+                <section class="hidden">
+                    <p>Hello World</p>
+                </section>
+                <button id="jokeButton" onclick="getAJoke()">Get a Joke</button>
+                <p id="joke"></p>
+            </div>
             <div class="repositories">
-                <fieldset>
-                    <div class="labelImput">
-                        <label for="search">Search</label>:
-                        <input id="search" type="text" required>
-                    </div>
+                <div class="labelImput">
                     <button id="searchButton" onclick="search()">Search</button>
-                </fieldset>
+                    <input id="search" type="text" required>
+                </div>
+
                 <ul id="repositoriesList"></ul>
             </div>
             <div class="createTable">
-                <fieldset>
-                    <div class="labelImput">
-                        <label for="matrix">Matrix</label>:
-                        <input id="matrix" type="text" required>
-                    </div>
-                    <button id="matrixButton" onclick="createTable()">Create</button>
-                </fieldset>
-                <table id="table"></table>
+                <button id="matrixButton" onclick="insertTable()">Create</button>
             </div>
         </section>
-        <section class="hidden">
-            <p>Hello World</p>
-        </section>
-        <button id="jokeButton" onclick="getAJoke()">Get a Joke</button>
-        <p id="joke"></p>
         <footer class="footer"></footer>
     </body>
 </html>
