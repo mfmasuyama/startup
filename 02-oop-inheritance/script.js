@@ -1,11 +1,12 @@
-// 1
-function Movie(title, year, duration) {
+// 1 - 4 - 8
+function Movie(title, year, duration) extends EventEmitter {
 	this.title = title;
 	this.year = year;
 	this.duration = duration;
 	this.play = function() {};
 	this.pause = function(){};
 	this.resume = function(){}
+	this.anotherCast = [];
 }
 
 // 2
