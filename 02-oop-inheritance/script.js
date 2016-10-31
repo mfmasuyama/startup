@@ -1,10 +1,3 @@
-// 3
-function EventEmitter() {
-	this.on = function() {};
-	this.emit = function(){};
-	this.off = function(){}
-}
-
 // 1 DONE- 4 - 8 DONE
 function Movie(title, year, duration) {
 	this.title = title;
@@ -36,6 +29,13 @@ let movie1 = new Movie("Notebook", 2004, 123);
 let movie2 = new Movie("Star Wars: Episode II - Attack of the Clones", 2002, 142);
 let movie3 = new Movie("SlumdogMillonaire", 2008, 120);
 
+// 3
+function EventEmitter() {
+	this.on = function() {};
+	this.emit = function(){};
+	this.off = function(){}
+}
+
 // 5
 /*
 let logger = {
@@ -46,19 +46,16 @@ let logger = {
 */
 
 // 6
-/*
-let social {
+var Social = function() {
 	this.share = function(friendName) {
-		console.log("Share " + Movie.title + " with " + friendName);
-	};
+		console.log("Share " + this.title + " with " + friendName);
+	},
 	this.like = function(friendName) {
-		console.log("Like " + Movie.title + " with " + friendName);
+		console.log("Like " + this.title + " with " + friendName);
 	}
 }
-Object.assign(Movie, social);
-*/
-
-
+//Object.assign(Movie, Social);
+Social.call(movie1);
 
 // 7 DONE
 function Actor(firstName, lastName) {
@@ -71,3 +68,6 @@ let actor2 = new Actor("Rachel", "McAdams");
 let actor3 = new Actor("James", "Garner");
 let actor4 = new Actor("Gena", "Rowlands");
 let actors = [actor2, actor3, actor4];
+
+movie1.addCast(actor1);
+movie1.addCast(actors);
