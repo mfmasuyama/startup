@@ -1,4 +1,4 @@
-// 1 DONE- 4 - 8 DONE
+// 1 DONE- 4 DONE - 8 DONE
 function Movie(title, year, duration) {
 	this.inheritFrom = EventEmitter;
   	this.inheritFrom();
@@ -6,9 +6,15 @@ function Movie(title, year, duration) {
 	this.year = year;
 	this.duration = duration;
 	this.cast = new Array();
-	this.play = function() {};
-	this.pause = function(){};
-	this.resume = function(){}
+	this.play = function() {
+		this.emit("play");
+	};
+	this.pause = function(){
+		this.emit("pause");
+	};
+	this.resume = function(){
+		this.emit("resume");
+	}
 	this.addCast = function(actors) {
 		this.cast = this.cast.concat(actors);
 	};
@@ -24,7 +30,7 @@ let movie1 = new Movie("Notebook", 2004, 123);
 let movie2 = new Movie("Star Wars: Episode II - Attack of the Clones", 2002, 142);
 let movie3 = new Movie("SlumdogMillonaire", 2008, 120);
 
-// 3
+// 3 DONE
 function EventEmitter() {
 	this.eventHandlers = [
 		{
@@ -53,22 +59,28 @@ function EventEmitter() {
 		}
 		this.eventHandlers[i].callback = callback;
 	};
-	this.emit = function(){
-
+	this.emit = function(event){
+		let i = 0;
+		while (this.eventHandlers[i].name !== event) {
+			i++;
+		}
+		this.eventHandlers[i].callback();
 	};
-	this.off = function(){
-
+	this.off = function(event){
+		let i = 0;
+		while (this.eventHandlers[i].name !== event) {
+			i++;
+		}
+		this.eventHandlers[i].pop();
 	};
 }
 
 // 5
-/*
 let logger = {
 	log : function(info) {
 		this.logger.addEventListener(Movie.play());
-	};
+	}
 }
-*/
 
 // 6 DONE
 var Social = function() {
