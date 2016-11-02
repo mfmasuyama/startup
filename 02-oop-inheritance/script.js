@@ -8,19 +8,12 @@ function Movie(title, year, duration) {
 	this.pause = function(){};
 	this.resume = function(){}
 	this.addCast = function(actors) {
-		if(Array.isArray(actors)) {
-			for(let i = 0; i<actors.length; i++) {
-				this.cast.push(actors[i]);
-			}
-		} else {
-			this.cast.push(actors);
-		}
-
+		this.cast = this.cast.concat(actors);
 	};
 	this.showCast = function() {
-		for(let i = 0; i<this.cast.length; i++) {
-			console.log(this.cast[i]);
-		}
+		this.cast.forEach(function(actor) {
+			console.log(actor);
+		});
 	}
 }
 
@@ -31,9 +24,15 @@ let movie3 = new Movie("SlumdogMillonaire", 2008, 120);
 
 // 3
 function EventEmitter() {
-	this.on = function() {};
-	this.emit = function(){};
-	this.off = function(){}
+	this.on = function(callback) {
+		
+	};
+	this.emit = function(){
+
+	};
+	this.off = function(){
+
+	}
 }
 
 // 5
@@ -45,7 +44,7 @@ let logger = {
 }
 */
 
-// 6
+// 6 DONE
 var Social = function() {
 	this.share = function(friendName) {
 		console.log("Share " + this.title + " with " + friendName);
@@ -54,7 +53,6 @@ var Social = function() {
 		console.log("Like " + this.title + " with " + friendName);
 	}
 }
-//Object.assign(Movie, Social);
 Social.call(movie1);
 
 // 7 DONE
