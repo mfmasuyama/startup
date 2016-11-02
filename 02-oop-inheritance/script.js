@@ -32,53 +32,39 @@ let movie3 = new Movie("SlumdogMillonaire", 2008, 120);
 
 // 3 DONE
 function EventEmitter() {
-	this.eventHandlers = [
-		{
-			name: "play",
-			callback: function() {
-				console.log("played");
-			}
-		},
-		{
-			name: "pause",
-			callback: function() {
-				console.log("paused");
-			},
-		},
-		{
-			name: "resume",
-			callback: function() {
-				console.log("resumed");
-			},
-		}
-	];
-	this.on = function(event, callback) {
-		let i = 0;
-		while (this.eventHandlers[i].name !== event) {
-			i++;
-		}
-		this.eventHandlers[i].callback = callback;
+	this.eventHandlers = new Array();
+	this.on = function(name, callback) {
+		this.eventHandlers.push({
+			name : name,
+			callback : callback
+			/*callback: function() {
+				console.log(event);
+			}*/
+		});
 	};
-	this.emit = function(event){
+	this.emit = function(name){
 		let i = 0;
-		while (this.eventHandlers[i].name !== event) {
+		while (this.eventHandlers[i].name !== name) {
 			i++;
 		}
 		this.eventHandlers[i].callback();
 	};
-	this.off = function(event){
+	this.off = function(name){
 		let i = 0;
-		while (this.eventHandlers[i].name !== event) {
+		while (this.eventHandlers[i].name !== name) {
 			i++;
 		}
 		this.eventHandlers[i].pop();
 	};
 }
 
-// 5
-let logger = {
-	log : function(info) {
-		this.logger.addEventListener(Movie.play());
+// 5 DONE
+function Logger() {
+	/*this.addEventListener(Movie.play(), log("played"));
+	this.addEventListener(Movie.pause(), log("paused"));
+	this.addEventListener(Movie.resume(), log("resumed"));*/
+	this.log = function(info) {
+		console.log("The " + info + " event has been emitted.");
 	}
 }
 
