@@ -1,5 +1,7 @@
 // 1 DONE- 4 - 8 DONE
 function Movie(title, year, duration) {
+	this.inheritFrom = EventEmitter;
+  	this.inheritFrom();
 	this.title = title;
 	this.year = year;
 	this.duration = duration;
@@ -15,6 +17,20 @@ function Movie(title, year, duration) {
 			console.log(actor);
 		});
 	}
+	this.eventHandlers = [
+		{
+			name: 'play',
+			callback: function() {
+				console.log('played')
+			}
+		},
+		{
+			name: 'stop',
+			callback: function() {
+				console.log('stopped')
+			},
+		}
+	];
 }
 
 // 2 DONE
@@ -24,15 +40,15 @@ let movie3 = new Movie("SlumdogMillonaire", 2008, 120);
 
 // 3
 function EventEmitter() {
-	this.on = function(callback) {
-		
+	this.on = function() {
+
 	};
 	this.emit = function(){
 
 	};
 	this.off = function(){
 
-	}
+	};
 }
 
 // 5
