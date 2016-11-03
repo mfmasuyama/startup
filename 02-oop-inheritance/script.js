@@ -36,10 +36,7 @@ function EventEmitter() {
 	this.on = function(name, callback) {
 		this.eventHandlers.push({
 			name : name,
-			callback : callback
-			/*callback: function() {
-				console.log(event);
-			}*/
+			callback : callback(name)
 		});
 	};
 	this.emit = function(name){
@@ -60,11 +57,8 @@ function EventEmitter() {
 
 // 5 DONE
 function Logger() {
-	/*this.addEventListener(Movie.play(), log("played"));
-	this.addEventListener(Movie.pause(), log("paused"));
-	this.addEventListener(Movie.resume(), log("resumed"));*/
-	this.log = function(info) {
-		console.log("The " + info + " event has been emitted.");
+	this.log = function(eventName) {
+		console.log("The " + eventName + " event has been emitted.");
 	}
 }
 
